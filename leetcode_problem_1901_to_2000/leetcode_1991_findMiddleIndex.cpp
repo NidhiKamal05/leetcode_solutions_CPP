@@ -1,5 +1,5 @@
 
-// 724. FIND PIVOT INDEX
+// 1991. FIND THE MIDDLE INDEX IN ARRAY
 
 #include<iostream>
 #include<vector>
@@ -7,7 +7,7 @@
 
 using namespace std ;
 
-int pivotIndex(vector<int>& nums) {
+int findMiddleIndex(vector<int>& nums) {
 	int n = nums.size() ;
     int totalSum = accumulate(nums.begin(), nums.end(), 0) ;
     int leftSum = 0 ;
@@ -26,8 +26,8 @@ int main(){
 	int l, e ;
 	
 	cout << endl ;
-	cout << "  FIND PIVOT INDEX " << endl ;
-	cout << " ``````````````````" << endl ;
+	cout << "  FIND THE MIDDLE INDEX IN ARRAY " << endl ;
+	cout << " ````````````````````````````````" << endl ;
 	
 	cout << endl ;	
 	cout << "Enter size of the array : " ;
@@ -40,10 +40,10 @@ int main(){
 		nums.push_back(e) ;
 	}
 	
-	e = pivotIndex(nums) ;
+	e = findMiddleIndex(nums) ;
 	
 	cout << endl ;
-	cout << "Pivot index = " << e << endl ;
+	cout << "Middle Index = " << e << endl ;
 	
 	cout << endl ;
 	
@@ -51,27 +51,3 @@ int main(){
 	
 	return 0 ;
 }
-
-/** WRONG ANSWER **/
-/*int pivotIndex(vector<int>& nums) {
-	int n = nums.size() ;
-	int prefixSum, postfixSum ;
-	for(int i=n-1; i>=0; --i) {
-		prefixSum = 0 ;
-		postfixSum = 0 ;
-		if(i > 0) {
-			for(int j=0; j<i; ++j) {
-				prefixSum += nums[j] ;
-			}
-		}
-		if(i < n-1) {
-			for(int j=i+1; j<n; ++j) {
-				postfixSum += nums[j] ;
-			}
-		}
-		if(prefixSum == postfixSum) {
-			return i ;
-		}
-	}
-	return -1 ;
-*/}
