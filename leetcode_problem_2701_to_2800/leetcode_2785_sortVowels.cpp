@@ -2,63 +2,33 @@
 // 2785. SORT VOWELS IN A STRING
 
 #include<iostream>
-#include<cstring>
-#include<vector>
+#include<algorithm>
 
 using namespace std ;
 
-void Sort(vector<char> & v)
-{
-	int t ;
-	for(int i=0; i<v.size()-1; ++i)
-	{
-		for(int j=v.size()-1; j>i; --j)
-		{
-			if(v.at(j) < v.at(j-1))
-			{
-				t = v.at(j) ;
-				v.at(j) = v.at(j-1) ;
-				v.at(j-1) = t ;
-			}
-		}
-	}
+bool isVowel(char ch) {
+	return ((ch=='a')||(ch=='e')||(ch=='i')||(ch=='o')||(ch=='u')||(ch=='A')||(ch=='E')||(ch=='I')||(ch=='O')||(ch=='U')) ;
 }
 
-string sortVowels(string s)
-{
-	vector<char> t{} ;	
-	int FLAG = 0 ;
-	for(int i=0; i<s.length(); ++i)
-	{
-		if((s.at(i)=='a')||(s.at(i)=='e')||(s.at(i)=='i')||(s.at(i)=='o')||(s.at(i)=='u')
-			||(s.at(i)=='A')||(s.at(i)=='E')||(s.at(i)=='I')||(s.at(i)=='O')||(s.at(i)=='U'))
-		{
-			t.push_back(s.at(i)) ; cout << "*" << t.at(t.size()-1) ;
-			FLAG = 1 ;
+string sortVowels(string s) {
+	string temp ;
+	for(char ch : s) {
+		if(isVowel(ch)) {
+			temp.push_back(ch) ;
 		}
 	}
-    if(FLAG == 1)
-	{	
-	    // sort(t.begin(), t.end()) ;
-	    Sort(t) ;	
-	    int k = 0 ;
-	    for(int i=0; i<s.length(); ++i)
-	    {
-	    	if((s.at(i)=='a')||(s.at(i)=='e')||(s.at(i)=='i')||(s.at(i)=='o')||(s.at(i)=='u')
-			    ||(s.at(i)=='A')||(s.at(i)=='E')||(s.at(i)=='I')||(s.at(i)=='O')||(s.at(i)=='U'))
-		    {
-	    		s.at(i) = t.at(k) ;
-	    		++k ;
-	    	}
-	    }
+	sort(temp.begin(), temp.end()) ;
+	int k = 0 ;
+	for(int i=0; i<s.length(); ++i)	{
+		if(isVowel(s[i])) {
+			s[i] = temp[k++] ;
+		}
 	}
 	return s ;
 }
 
-int main()
-{
-	string s ;
-	string r ;
+int main() {
+	string s, r ;
 	
 	cout << endl ;
 	cout << "  SORT VOWELS IN A STRING  " << endl ;
@@ -68,15 +38,12 @@ int main()
 	cout << "Enter a string...... " << endl ;
 	cout << "s = " ;
 	cin >> s ;
-		
-	cout << endl ;
 	
 	r = sortVowels(s) ;
 	
-	cout << endl ;
-	
-	cout << endl << " After Sorting...." ;
-	cout << endl << "  " <<  r ;
+	cout << endl ;	
+	cout << " After Sorting...." << endl ;
+	cout << r << endl ;
 	
 	cout << endl << endl ;
 	
