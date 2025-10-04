@@ -8,20 +8,20 @@ using namespace std ;
 
 int maxArea(vector<int> & height){
 	int area = 0 ;
-	int left = 0 ;
-	int right = height.size()-1 ;
+	int left = 0, right = height.size()-1 ;
 	while(left < right){
-		area = max(area, (right-left) * min(height.at(left), height.at(right))) ;
-		if(height.at(left) < height.at(right))
+		area = max(area, (right-left) * min(height[left], height[right])) ;
+		if(height[left] < height[right]) {
 			++left ;
-		else
+		}
+		else {
 			--right ;
+		}
 	}
 	return area ;
 }
 
-int main()
-{
+int main() {
 	int l, e;
 	vector<int> height{} ;
 	
@@ -33,8 +33,7 @@ int main()
 	cin >> l ;
 	
 	cout << endl << "Enter heights...... " << endl ;
-	for(int i = 0; i < l; i++)
-	{
+	for(int i = 0; i < l; i++) {
 		cin >> e ;
 		height.push_back(e) ;
 	}
