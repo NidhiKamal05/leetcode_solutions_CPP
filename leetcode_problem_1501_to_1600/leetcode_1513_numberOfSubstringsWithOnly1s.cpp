@@ -5,26 +5,6 @@
 
 using namespace std ;
 
-/** JAVA SOLUTION **/
-/*class Solution {
-    public int numSub(String s) {
-        final int MOD = 1000000007 ;
-        long ans = 0 ;
-        for(int i=0; i<s.length(); ++i) {
-            if(s.charAt(i) == '1') {
-                long n = 0 ;
-                while(i < s.length() && s.charAt(i) != '0') {
-                    ++n ;
-                    ++i ;
-                }
-                --i ;
-                ans += n * (n + 1) / 2 ;
-            }
-        }
-        return (int) (ans % MOD) ;
-    }
-}*/
-
 int numSub(string s) {
     const int MOD = 1000000007 ;
     long long ans = 0 ;
