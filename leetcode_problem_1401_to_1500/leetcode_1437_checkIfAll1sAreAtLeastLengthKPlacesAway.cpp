@@ -6,28 +6,6 @@
 
 using namespace std ;
 
-/** JAVA SOLUTION **/
-/*class Solution {
-    public boolean kLengthApart(int[] nums, int k) {
-        int n = nums.length ;
-		for(int i=0; i<n; ++i) {
-			if(nums[i] == 1 && i < n-1) {
-                ++i ;
-				int cnt = 0 ;		
-				while(i < n && nums[i] == 0) {
-					++cnt ;
-					++i ;
-				}
-				if(cnt < k && (i < n && nums[i] == 1)) {
-					return false ;
-				}
-				--i ;
-			}
-		}
-		return true ;
-    }
-}*/
-
 bool kLengthApart(vector<int>& nums, int k) {
     int n = nums.size() ;
     for(int i=0; i<n; ++i) {
