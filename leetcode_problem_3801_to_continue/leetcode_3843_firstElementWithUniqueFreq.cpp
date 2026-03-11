@@ -15,26 +15,6 @@
 
 using namespace std ;
 
-/** JAVA SOLUTION **/
-/*class Solution {
-    public int firstUniqueFreq(int[] nums) {
-        Map<Integer, Integer> freq = new HashMap<>() ;
-        for(int num : nums) {
-            freq.put(num, freq.getOrDefault(num, 0) + 1) ;
-        }
-        Map<Integer, Integer> freqCnt = new HashMap<>() ;
-        for(Map.Entry<Integer, Integer> f : freq.entrySet()) {
-            freqCnt.put(f.getValue(), freqCnt.getOrDefault(f.getValue(), 0) + 1) ;
-        }
-        for(int num : nums) {
-            if(freqCnt.get(freq.get(num)) == 1) {
-                return num ;
-            }
-        }
-        return -1 ;
-    }
-}*/
-
 int firstUniqueFreq(vector<int>& nums) {
     unordered_map<int, int> freq ;
     for(int& num : nums) {
