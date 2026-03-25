@@ -15,38 +15,6 @@
 
 using namespace std ;
 
-/** JAVA SOLUTION **/
-/*class Solution {
-    public boolean canPartitionGrid(int[][] grid) {
-        long totalSum = 0 ;
-        for(int[] row : grid) {
-            for(int x : row) {
-                totalSum += x ;
-            }
-        }
-        int m = grid.length, n = grid[0].length ;
-        long sum = 0 ;
-        for(int i = 0; i < m - 1; ++i) {
-            for(int j = 0; j < n; ++j) {
-                sum += grid[i][j] ;
-            }
-            if(sum == (totalSum - sum)) {
-                return true ;
-            }
-        }
-        sum = 0 ;
-        for(int i = 0; i < n - 1; ++i) {
-            for(int j = 0; j < m; ++j) {
-                sum += grid[j][i] ;
-            }
-            if(sum == (totalSum - sum)) {
-                return true ;
-            }
-        }
-        return false ;
-    }
-}*/
-
 bool canPartitionGrid(vector<vector<int>>& grid) {
     long long totalSum = 0 ;
     for(vector<int>& row : grid) {
