@@ -7,7 +7,7 @@
 // https://leetcode.com/problems/decode-the-slanted-ciphertext/solutions/7779714/c-solution-by-nidhi_kamal-ypna/
 
 /* JAVA */
-// 
+// https://leetcode.com/problems/decode-the-slanted-ciphertext/solutions/7787724/java-solution-by-nidhi_kamal-88yz/
 
 #include<iostream>
 #include<vector>
