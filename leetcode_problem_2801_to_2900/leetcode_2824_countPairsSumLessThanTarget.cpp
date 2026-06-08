@@ -1,5 +1,10 @@
 
-// 2824. COUNT PAIRS WHOSE SUM IS LESS THAN TARGET
+// 2824. COUNT PAIRS WHOSE SUM IS LESS THEN TARGET
+
+/** T.C. - O(NLogN) & S.C. - O(1) **/
+
+/* C++ */
+// https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/solutions/5937168/0-ms-beats-100-two-pointer-approach-by-n-yl4j/
 
 #include<iostream>
 #include<vector>
