@@ -37,8 +37,8 @@ int main() {
 	string s, palindrome ;
 	
 	cout << endl ;
-	cout << "  FRIENDS OF APPROPRIATE AGES " << endl ;
-	cout << " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl ;
+	cout << "  SMALLEST PALINDROMIC REARRANGEMENT I " << endl ;
+	cout << " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl ;
 	
 	cout << endl ;
 	cout << "Enter a palindromic string, s = " ;
